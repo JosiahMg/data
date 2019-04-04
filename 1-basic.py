@@ -84,3 +84,12 @@ with open('./data/grades.csv') as csvfile:
 sum_assign1 = sum(float(row['assignment1_grade']) for row in grades_data) / len(grades_data)
 avg_assign1 = sum_assign1/len(grades_data)
 print('assignment1平均分数：', avg_assign1)
+
+
+# pack & unpack
+
+l1 = list(range(1, 6))
+l2 = list(range(6, 11))
+zip_gen = zip(l1, l2)
+x, y = zip(*zip_gen)
+list(x)
